@@ -20,21 +20,21 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 			@printf "$(GREEN)[ZOMBIE] Linking...$(RESET)\n"
-			@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
-			@printf "$(GREEN)[ZOMBIE] $(NAME) compilation success!$(RESET)\n"
+			@$(CFLAGS) $(OBJS) -o $(NAME)
+			@printf "$(GREEN)[ZOMBIE] $(NAME) compilation success!$(RESET)\n\n"
 			$(HEADER)
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
 			@mkdir -p $(OBJ_DIR)
 			@printf "$(YELLOW)[ZOMBIE] Compiling : $< $(RESET)\n"
-			@$(CXX) $(CXXFLAGS) -c $< -o $@
+			@$(CFLAGS) -c $< -o $@
 
 clean :
-			@$(RM) -rf $(OBJ_DIR)
+			@rm -rf $(OBJ_DIR)
 			@printf "$(RED)[ZOMBIE] Object files cleaned!$(RESET)\n"
 
 fclean : clean
-			@$(RM) -f $(NAME)
+			@rm -f $(NAME)
 			@printf "$(RED)[ZOMBIE] Executable $(NAME) cleaned.$(RESET)\n"
 
 re : fclean all
