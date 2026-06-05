@@ -7,7 +7,7 @@ RESET       = \033[0m
 #---------------------
 
 NAME = EX02
-CFLAGS = c++ -Wall -Wextra -Werror
+CFLAGS = c++ -Wall -Wextra -Werror -std=c++98
 
 OBJ_DIR = objs/
 SRC_DIR = src/
