@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 17:28:44 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/04 12:14:26 by yorimek          ###   ########.fr       */
+/*   Created: 2026/06/02 17:27:59 by yorimek           #+#    #+#             */
+/*   Updated: 2026/06/05 11:52:11 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 
-void	randomChump(std::string name)
+int	main(void)
 {
-	Zombie	randomZombie(name);
+	Zombie	*newZombi1;
 
-	randomZombie.announce();
-	return ;
+	randomChump("NewZombie2");
+	newZombi1 = newZombie("NewZombie1");
+	newZombi1->announce();
+	delete newZombi1;
+	return (0);
 }

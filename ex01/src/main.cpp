@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/04 14:05:28 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/04 14:56:58 by yorimek          ###   ########.fr       */
+/*   Created: 2026/06/04 14:05:33 by yorimek           #+#    #+#             */
+/*   Updated: 2026/06/05 11:49:10 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 
-void	Zombie::setName(std::string name)
+int	main(int argc, char **argv)
 {
-	this->_name = name;
-}
-
-Zombie	*zombieHorde(int N, std::string name)
-{
+	int	N;
 	Zombie	*horde;
-	int		i;
 	
-	horde = new Zombie[N];
-	i = 0;
-	while (i < N)
+	if (argc != 2)
 	{
-		horde[i].setName(name);
-		i++;
+		std::cout << "Input expected> ./Zombie_Army <N>" << std::endl;
+		return (1);
 	}
-	return (horde);
+	N = atoi(argv[1]);
+	horde = zombieHorde(N, "Zombie");
+	for (int i = 0; i < N; i++)
+	{
+		std::cout << "Horde's index [" << i << "] ";
+		horde[i].announce();
+	}
+	delete [] horde;
+	return (0);
 }

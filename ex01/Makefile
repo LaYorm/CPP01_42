@@ -7,9 +7,10 @@ RESET       = \033[0m
 #---------------------
 
 NAME = Zombie_Army
-CFLAGS = c++ -Wall -Wextra -Werror -std=c++98
+CFLAGS = c++ -Wall -Wextra -Werror -std=c++98 -Iinclude
 
 OBJ_DIR = objs/
+SRC_DIR = src/
 
 SRC_FILES = main.cpp ZombieHorde.cpp Zombie.cpp
 
@@ -23,8 +24,8 @@ $(NAME) : $(OBJS)
 			@printf "$(GREEN)[ZOMBIE] $(NAME) compilation success!$(RESET)\n\n"
 			$(HEADER)
 
-$(OBJ_DIR)%.o : %.cpp
-			@mkdir -p $(dir $@)
+$(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
+			@mkdir -p $(OBJ_DIR)
 			@printf "$(YELLOW)[ZOMBIE] Compiling : $< $(RESET)\n"
 			@$(CXX) $(CXXFLAGS) -c $< -o $@
 

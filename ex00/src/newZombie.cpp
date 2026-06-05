@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/04 14:05:33 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/04 14:55:47 by yorimek          ###   ########.fr       */
+/*   Created: 2026/06/02 17:28:34 by yorimek           #+#    #+#             */
+/*   Updated: 2026/06/05 11:52:33 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 
-int	main(int argc, char **argv)
+Zombie	*newZombie(std::string name)
 {
-	int	N;
-	Zombie	*horde;
-	
-	if (argc != 2)
-	{
-		std::cout << "Input expected> ./Zombie_Army <N>" << std::endl;
-		return (1);
-	}
-	N = atoi(argv[1]);
-	horde = zombieHorde(N, "Zombie");
-	for (int i = 0; i < N; i++)
-	{
-		std::cout << "Horde's index [" << i << "] ";
-		horde[i].announce();
-	}
-	delete [] horde;
-	return (0);
+	Zombie	*newZ;
+
+	newZ= new Zombie(name);
+	return (newZ);
 }

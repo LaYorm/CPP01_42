@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:05:35 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/04 14:49:03 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/05 11:49:23 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 
 Zombie::Zombie()
 {

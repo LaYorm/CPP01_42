@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 17:27:59 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/04 12:16:05 by yorimek          ###   ########.fr       */
+/*   Created: 2026/06/04 14:05:28 by yorimek           #+#    #+#             */
+/*   Updated: 2026/06/05 11:49:31 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 
-int	main(void)
+void	Zombie::setName(std::string name)
 {
-	Zombie	*newZombi1;
+	this->_name = name;
+}
 
-	randomChump("NewZombie2");
-	newZombi1 = newZombie("NewZombie1");
-	newZombi1->announce();
-	delete newZombi1;
-	return (0);
+Zombie	*zombieHorde(int N, std::string name)
+{
+	Zombie	*horde;
+	int		i;
+	
+	horde = new Zombie[N];
+	i = 0;
+	while (i < N)
+	{
+		horde[i].setName(name);
+		i++;
+	}
+	return (horde);
 }
