@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:05:38 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/04 14:56:43 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/05 13:51:46 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ZOMBIE_HPP
 
 #include "iostream"
+#include <cstdlib>
 
 class Zombie
 {
