@@ -19,23 +19,23 @@ OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-			@printf "$(GREEN)[ZOMBIE] Linking...$(RESET)\n"
+			@printf "$(GREEN)[EX00] Linking...$(RESET)\n"
 			@$(CFLAGS) $(OBJS) -o $(NAME)
-			@printf "$(GREEN)[ZOMBIE] $(NAME) compilation success!$(RESET)\n\n"
+			@printf "$(GREEN)[EX00] $(NAME) compilation success!$(RESET)\n\n"
 			$(HEADER)
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
 			@mkdir -p $(OBJ_DIR)
-			@printf "$(YELLOW)[ZOMBIE] Compiling : $< $(RESET)\n"
+			@printf "$(YELLOW)[EX00] Compiling : $< $(RESET)\n"
 			@$(CFLAGS) -c $< -o $@
 
 clean :
 			@rm -rf $(OBJ_DIR)
-			@printf "$(RED)[ZOMBIE] Object files cleaned!$(RESET)\n"
+			@printf "$(RED)[EX00] Object files cleaned!$(RESET)\n"
 
 fclean : clean
 			@rm -f $(NAME)
-			@printf "$(RED)[ZOMBIE] Executable $(NAME) cleaned.$(RESET)\n"
+			@printf "$(RED)[EX00] Executable $(NAME) cleaned.$(RESET)\n"
 
 re : fclean all
 
