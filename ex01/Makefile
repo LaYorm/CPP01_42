@@ -39,4 +39,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : fclean re cleanrm
+.PHONY : fclean re clean
