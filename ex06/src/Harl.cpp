@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 16:15:20 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/10 17:42:34 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/10 17:44:00 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,8 @@ void	Harl::complain(std::string level)
 	int			i;
 
 	for (i = 0; i < 4; i++)
-	{
 		if (levels[i] == level)
 			break;
-	}
 	switch (i)
 	{
 	case 0:
