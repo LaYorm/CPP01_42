@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 10:56:30 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/09 17:21:58 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/10 10:57:12 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ int	main(int argc, char **argv)
 	if (status)
 		return (status);
 	ft_read_replace(&ifs, &ofs, argv);
-	// ifs.close();
+	ifs.close();
+	ofs.close();
+	return (0);
 }

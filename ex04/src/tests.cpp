@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 17:20:21 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/09 17:54:32 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/10 10:57:46 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int	main()
 	std::cout << std::endl;
 	std::cout << "Valid input." << std::endl;
 	system("./replace test.txt '1' ' ' && cat test.txt.replace");
+	return (0);
 }

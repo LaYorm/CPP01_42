@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 15:50:43 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/09 17:18:07 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/10 10:35:23 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_read_replace(std::ifstream *inputfile, std::ofstream *outputfile, char **argv)
 {
-	(void)outputfile;
 	std::string	full_txt;
 	std::string	final_txt;
 	std::string	to_find;
