@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 16:15:20 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/10 17:34:55 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/10 17:42:34 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,35 +58,17 @@ void	Harl::complain(std::string level)
 		std::cout << "[ DEBUG ]" << std::endl;
 		Harl::_debug();
 		std::cout << std::endl;
-		std::cout << "[ INFO ]" << std::endl;
-		Harl::_info();
-		std::cout << std::endl;
-		std::cout << "[ WARNING ]" << std::endl;
-		Harl::_warning();
-		std::cout << std::endl;
-		std::cout << "[ ERROR ]" << std::endl;
-		Harl::_error();
-		std::cout << std::endl;
-		break;
+		[[fallthrough]];
 	case 1:
 		std::cout << "[ INFO ]" << std::endl;
 		Harl::_info();
 		std::cout << std::endl;
-		std::cout << "[ WARNING ]" << std::endl;
-		Harl::_warning();
-		std::cout << std::endl;
-		std::cout << "[ ERROR ]" << std::endl;
-		Harl::_error();
-		std::cout << std::endl;
-		break;
+		[[fallthrough]];
 	case 2:
 		std::cout << "[ WARNING ]" << std::endl;
 		Harl::_warning();
 		std::cout << std::endl;
-		std::cout << "[ ERROR ]" << std::endl;
-		Harl::_error();
-		std::cout << std::endl;
-		break;
+		[[fallthrough]];
 	case 3:
 		std::cout << "[ ERROR ]" << std::endl;
 		Harl::_error();
